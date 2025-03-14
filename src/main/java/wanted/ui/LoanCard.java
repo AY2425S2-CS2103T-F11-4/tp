@@ -40,6 +40,10 @@ public class LoanCard extends UiPart<Region> {
     private Label email;
     @FXML
     private FlowPane tags;
+    @FXML
+    private Label amount;
+    @FXML
+    private Label date;
 
     /**
      * Creates a {@code PersonCode} with the given {@code Loan} and index to display.

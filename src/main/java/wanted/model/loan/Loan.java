@@ -15,30 +15,39 @@ import wanted.model.tag.Tag;
  * Guarantees: details are present and not null, field values are validated, immutable.
  */
 public class Loan {
-
     // Identity fields
     private final Name name;
+    private final Amount amount;
+    private final LoanDate loanDate;
     private final Phone phone;
     private final Email email;
-
-    // Data fields
     private final Address address;
+    // Data fields
     private final Set<Tag> tags = new HashSet<>();
 
     /**
      * Every field must be present and not null.
      */
-    public Loan(Name name, Phone phone, Email email, Address address, Set<Tag> tags) {
-        requireAllNonNull(name, phone, email, address, tags);
+    public Loan(Name name, Phone phone, Email email, Address address, Amount amount, LoanDate date, Set<Tag> tags) {
+        requireAllNonNull(name, phone, email, address, amount, date, tags);
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.address = address;
+        this.amount = amount;
+        this.loanDate = date;
         this.tags.addAll(tags);
     }
 
     public Name getName() {
         return name;
+    }
+
+    public Amount getAmount() {
+        return amount;
+    }
+    public LoanDate getLoanDate() {
+        return loanDate;
     }
 
     public Phone getPhone() {
@@ -94,13 +103,15 @@ public class Loan {
                 && phone.equals(otherPerson.phone)
                 && email.equals(otherPerson.email)
                 && address.equals(otherPerson.address)
+                && amount.equals(otherPerson.amount)
+                && loanDate.equals(otherPerson.loanDate)
                 && tags.equals(otherPerson.tags);
     }
 
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, phone, email, address, tags);
+        return Objects.hash(name, phone, email, address, amount, loanDate, tags);
     }
 
     @Override
@@ -110,6 +121,8 @@ public class Loan {
                 .add("phone", phone)
                 .add("email", email)
                 .add("address", address)
+                .add("amount", amount)
+                .add("date", loanDate)
                 .add("tags", tags)
                 .toString();
     }
