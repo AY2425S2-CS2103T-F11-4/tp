@@ -1,6 +1,7 @@
 package wanted.ui;
 
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -21,6 +22,7 @@ public class StatusBarFooter extends UiPart<Region> {
      */
     public StatusBarFooter(Path saveLocation) {
         super(FXML);
-        saveLocationStatus.setText(saveLocation.toString());
+        saveLocationStatus.setText(Paths.get(".").resolve(saveLocation).toString());
     }
+
 }
