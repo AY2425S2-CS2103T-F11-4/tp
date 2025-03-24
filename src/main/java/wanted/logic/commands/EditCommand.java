@@ -31,7 +31,7 @@ import wanted.model.tag.Tag;
  */
 public class EditCommand extends Command {
 
-    public static final boolean IS_ENABLED = false;
+    public static final boolean IS_ENABLED = true;
 
     public static final String COMMAND_WORD = "edit";
 
