@@ -12,7 +12,6 @@ import wanted.commons.core.datatypes.Index;
 import wanted.commons.core.datatypes.MoneyInt;
 import wanted.commons.util.ToStringBuilder;
 import wanted.model.loan.exceptions.ExcessRepaymentException;
-import wanted.model.loan.exceptions.PhoneUnchangedException;
 import wanted.model.loan.transaction.AddLoanTransaction;
 import wanted.model.loan.transaction.LoanTransaction;
 import wanted.model.loan.transaction.RepayLoanTransaction;
@@ -26,7 +25,6 @@ import wanted.model.tag.Tag;
 public class Loan {
     // Identity fields
     private final Name name;
-    private final Phone phone;
 
     // Data fields
     private final LoanAmount loanAmount;
@@ -40,18 +38,6 @@ public class Loan {
         this.name = name;
         this.loanAmount = loanAmount;
         this.tags.addAll(tags);
-        this.phone = Phone.EMPTY_PHONE;
-    }
-
-    /**
-     * Constructs a new Loan with the given name, LoanAmount, tags, and phone.
-     */
-    public Loan(Name name, LoanAmount loanAmount, Set<Tag> tags, Phone phone) {
-        requireAllNonNull(name, loanAmount, tags);
-        this.name = name;
-        this.loanAmount = loanAmount;
-        this.tags.addAll(tags);
-        this.phone = phone;
     }
 
     public Name getName() {
@@ -60,10 +46,6 @@ public class Loan {
 
     public LoanAmount getLoanAmount() {
         return loanAmount;
-    }
-
-    public Phone getPhone() {
-        return phone;
     }
 
     /**
@@ -141,7 +123,7 @@ public class Loan {
             throw new RuntimeException("Loan addition should not cause ExcessRepaymentException.");
         }
 
-        return new Loan(this.name, newLoanAmount, this.tags, this.phone);
+        return new Loan(this.name, newLoanAmount, this.tags);
     }
 
     /**
@@ -158,21 +140,7 @@ public class Loan {
 
         LoanAmount newLoanAmount = loanAmount.appendTransaction(transaction);
 
-        return new Loan(this.name, newLoanAmount, this.tags, this.phone);
-    }
-
-    /**
-     * Update new phone number of loan
-     *
-     * @param phone new phone
-     * @return new updated loan
-     */
-    public Loan changePhone(Phone phone) throws PhoneUnchangedException {
-        requireAllNonNull(phone);
-        if (phone.equals(this.phone) && !phone.equals(Phone.EMPTY_PHONE)) {
-            throw new PhoneUnchangedException();
-        }
-        return new Loan(this.name, this.loanAmount, this.tags, phone);
+        return new Loan(this.name, newLoanAmount, this.tags);
     }
 
     /**

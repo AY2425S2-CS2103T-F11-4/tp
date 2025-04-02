@@ -24,7 +24,6 @@ import wanted.model.loan.Loan;
 import wanted.model.loan.LoanAmount;
 import wanted.model.loan.LoanDate;
 import wanted.model.loan.Name;
-import wanted.model.loan.Phone;
 import wanted.model.tag.Tag;
 
 /**
@@ -99,9 +98,8 @@ public class EditCommand extends Command {
         Name updatedName = editPersonDescriptor.getName().orElse(loanToEdit.getName());
         Set<Tag> updatedTags = editPersonDescriptor.getTags().orElse(loanToEdit.getTags());
         LoanAmount updatedAmount = editPersonDescriptor.getAmount().orElse(loanToEdit.getLoanAmount());
-        Phone updatedPhone = editPersonDescriptor.getPhone().orElse(loanToEdit.getPhone());
 
-        return new Loan(updatedName, updatedAmount, updatedTags, updatedPhone);
+        return new Loan(updatedName, updatedAmount, updatedTags);
     }
 
     @Override
@@ -137,7 +135,6 @@ public class EditCommand extends Command {
         private Set<Tag> tags;
         private LoanAmount loanAmount;
         private LoanDate date;
-        private Phone phone;
 
         public EditPersonDescriptor() {
         }
@@ -151,7 +148,6 @@ public class EditCommand extends Command {
             setTags(toCopy.tags);
             setAmount(toCopy.loanAmount);
             setDate(toCopy.date);
-            setPhone(toCopy.phone);
         }
 
         /**
@@ -183,12 +179,6 @@ public class EditCommand extends Command {
 
         public Optional<LoanDate> getDate() {
             return Optional.ofNullable(date);
-        }
-        public void setPhone(Phone phone) {
-            this.phone = phone;
-        }
-        public Optional<Phone> getPhone() {
-            return Optional.ofNullable(phone);
         }
 
         /**
