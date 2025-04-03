@@ -40,9 +40,9 @@
       "src": "DeveloperGuide.md",
       "title": "Developer Guide",
       "headings": {
-        "ab-3-developer-guide": "AB-3 Developer Guide",
+        "wanted-developer-guide": "Wanted Developer Guide",
         "acknowledgements": "Acknowledgements",
-        "setting-up-getting-started": "Setting up, getting started",
+        "setting-up-getting-started": "Setting Up, Getting Started",
         "design": "Design",
         "architecture": "Architecture",
         "ui-component": "UI component",
@@ -62,8 +62,14 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-loan": "Deleting a loan",
-        "saving-data": "Saving data"
+        "adding-a-loan": "Adding a loan",
+        "repaying-a-loan": "Repaying a loan",
+        "editing-loan-transaction-history": "Editing loan transaction history",
+        "deleting-loan-transaction-history": "Deleting loan transaction history",
+        "finding-specific-entries": "Finding specific entries",
+        "displaying-all-entries": "Displaying all entries",
+        "sorting-the-list": "Sorting the list",
+        "deleting-a-loan": "Deleting a loan"
       },
       "headingKeywords": {}
     },
