@@ -115,8 +115,9 @@
       "headings": {
         "wanted-user-guide": "Wanted User Guide",
         "value-proposition": "Value Proposition",
+        "quick-start": "Quick Start",
         "tl-dr": "TL;DR",
-        "command-summary": "Command summary",
+        "command-summary": "Command Summary",
         "features": "Features",
         "viewing-help-help": "Viewing help: help",
         "adding-an-entry-add": "Adding an entry: add",
@@ -124,8 +125,8 @@
         "adding-updating-phone-number-phone": "Adding/Updating phone number: phone",
         "adding-updating-tags-tag": "Adding/Updating tags: tag",
         "adding-a-loan-increase": "Adding a loan: increase",
-        "repay-a-loan-repay": "Repay a loan: repay",
-        "editing-a-transaction-edit": "Editing a transaction: edit",
+        "repaying-a-loan-repay": "Repaying a loan: repay",
+        "editing-a-transaction-edithist": "Editing a transaction: edithist",
         "deleting-a-transaction-delhist": "Deleting a transaction: delhist",
         "listing-all-entries-list": "Listing all entries: list",
         "locating-entries-by-name-find": "Locating entries by name: find",
@@ -136,8 +137,7 @@
         "saving-the-data": "Saving the data",
         "backing-up-data-files": "Backing up data files",
         "transferring-data-across-devices": "Transferring data across devices",
-        "known-issues": "Known issues",
-        "quick-start": "Quick start"
+        "known-issues": "Known Issues"
       },
       "headingKeywords": {}
     },
