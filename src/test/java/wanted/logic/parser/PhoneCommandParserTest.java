@@ -23,7 +23,7 @@ public class PhoneCommandParserTest {
 
     @Test
     public void parse_validDeleteArgs_returnPhoneCommand() {
-        String input = INDEX_FIRST_PERSON.getOneBased() + " " + PREFIX_PHONE + PhoneCommand.DELETE_WORD;
+        String input = INDEX_FIRST_PERSON.getOneBased() + " " + PREFIX_PHONE;
         assertParseSuccess(parser, input, new PhoneCommand(INDEX_FIRST_PERSON, Phone.EMPTY_PHONE));
     }
 
