@@ -50,9 +50,6 @@
         "model-component": "Model component",
         "storage-component": "Storage component",
         "common-classes": "Common classes",
-        "implementation": "Implementation",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
-        "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
@@ -67,10 +64,11 @@
         "editing-loan-transaction-history": "Editing loan transaction history",
         "deleting-loan-transaction-history": "Deleting loan transaction history",
         "finding-specific-entries": "Finding specific entries",
-        "displaying-all-entries": "Displaying all entries",
+        "displaying-all-entries-by-name-in-alphabetical-order": "Displaying all entries by name in alphabetical order",
         "sorting-the-list": "Sorting the list",
         "deleting-a-loan": "Deleting a loan",
-        "appendix-planned-enhancements": "Appendix: Planned Enhancements"
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements",
+        "appendix-effort": "Appendix: Effort"
       },
       "headingKeywords": {}
     },
