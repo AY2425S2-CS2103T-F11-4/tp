@@ -114,6 +114,7 @@
       "headings": {
         "wanted-user-guide": "Wanted User Guide",
         "value-proposition": "Value Proposition",
+        "table-of-contents": "Table of Contents",
         "quick-start": "Quick Start",
         "tldr": "TL;DR",
         "command-summary": "Command Summary",
@@ -130,6 +131,7 @@
         "list": "Listing all entries: list",
         "sort": "Sorting entries: sort",
         "find": "Locating entries by name: find",
+        "sorting-entries-sort": "Sorting entries: sort",
         "delete": "Deleting an entry: delete",
         "clear": "Clearing all entries: clear",
         "exit": "Exiting the program: exit",
